@@ -46,12 +46,14 @@ const Board = () => {
 
   const winner = checkWinner(squares)
 const status = winner ?
-  `Winner: ${winner}` :
+  `🎊 Winner: ${winner} 🎊` :
   `Next player: ${xIsNext ? 'X' : 'O'}`
+
+  if (winner) {console.log(squares)}
 
   return (
     <div>
-      <dic className="status">{status}</dic>
+      <div className="status">{status}</div>
       <div className="board-row">
         {renderSquare(0)}{renderSquare(1)}{renderSquare(2)}
       </div>
@@ -67,10 +69,15 @@ const status = winner ?
 
 
 const Game = () => {
+
+  const startOver = () => {
+    window.location.reload(false);
+  }
   return (
     <div className="game">
       <h1>Tic-Tac-Toe</h1>
       <Board />
+      <button className="startOver" onClick={startOver}>Start Over</button>
     </div>
   )
 }
@@ -78,7 +85,7 @@ const Game = () => {
 const checkWinner = (squares) => {
   const lines = [
     [0,1,2], [3,4,5], [6,7,8],
-    [0,3,6], [1,4,5], [2,5,8],
+    [0,3,6], [1,4,7], [2,5,8],
     [0,4,8], [2,4,6]
   ]
 

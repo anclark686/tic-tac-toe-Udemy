@@ -1,25 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 .App {
   text-align: center;
   min-height: 100%;
   width: 100%;
-  background-color: blue;
+  background: rgb(6,40,61);
+  background: linear-gradient(317deg, rgba(6,40,61,1) 0%, rgba(19,99,223,1) 35%, rgba(71,181,255,1) 100%);
   background-size: cover;
   position: absolute;
+  font-family: 'Poppins', sans-serif;
 }
 
 .square {
-  background-color: aqua;
+  background-color: #06283D;
   width: 100px;
   height: 100px;
   text-align: center;
   font-size: 40px;
-
-  
+  color: #DFF6FF;
+  border-color: #47B5FF;
 }
 
 .board {
   width: 300px;
   height: 300px;
+  /* display: flex;
+  margin: auto; */
+}
+
+.board-row {
   display: flex;
-  margin: auto;
+  flex-flow: row nowrap;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #DFF6FF;
+}
+
+.startOver {
+  width: 150px;
+  height: 50px;
+  background-color: #06283D;
+  color: #DFF6FF;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  border-color: #47B5FF;
+}
+
+.status {
+  margin: 10px;
+  font-size: 20px;
+  
 }
